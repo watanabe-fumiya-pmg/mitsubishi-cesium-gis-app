@@ -1,7 +1,8 @@
 {
-    "name": "resium-example-webpack",
+    "name": "mitsubishi-gis-app",
     "version": "0.0.1",
     "type": "module",
+    "homepage": "/app",
     "private": true,
     "scripts": {
         "start": "webpack serve",

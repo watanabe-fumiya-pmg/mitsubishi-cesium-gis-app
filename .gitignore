@@ -1,4 +1,4 @@
-/cesium-gis-app/node_modules
-/cesium-gis-app/dist
-/cesium-gis-app/public/cesium
-/cesium-gis-app/.env
+/app/node_modules
+/app/dist
+/app/public/cesium
+/app/.env

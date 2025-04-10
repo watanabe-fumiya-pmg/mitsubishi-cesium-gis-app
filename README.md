@@ -12,3 +12,7 @@ docker-compose -f docker/docker-compose.prod.yml up --build
 cd .\cesium-gis-app\
 npm ci
 npm run start
+
+# バグ事項（後ほど issue 管理）
+
+https://sixtusagbo.medium.com/how-i-solved-webpack-chokidar-error-error-ebusy-resource-busy-or-locked-lstat-c-dumpstack-log-e7d5fc76c861
