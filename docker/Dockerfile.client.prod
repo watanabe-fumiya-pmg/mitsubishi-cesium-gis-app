@@ -1,0 +1,24 @@
+# Dockerfile.client.prod
+FROM node:16 AS build
+
+WORKDIR /app
+
+# 依存関係をインストール
+COPY client/package*.json ./
+RUN npm install
+
+# 本番ビルドを実行
+COPY client/ ./
+RUN npm run build
+
+# 本番ビルドをApacheにコピーするためのApache用の設定を行う
+FROM httpd:alpine
+
+# Apacheの設定ファイルをカスタマイズ（必要に応じて変更）
+COPY docker/httpd.conf /usr/local/apache2/conf/httpd.conf
+
+# Reactのビルド結果をApacheのドキュメントルートにコピー
+COPY --from=build /app/build/ /usr/local/apache2/htdocs/
+
+# Apacheをデフォルトで起動
+CMD ["httpd-foreground"]

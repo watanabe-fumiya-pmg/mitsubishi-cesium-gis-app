@@ -1,0 +1,66 @@
+@use '../variables' as *;
+
+// フッターのスタイル
+.map-view-footer-container {
+    padding-left: $notch-size;
+    padding-right: $notch-size;
+    height: $footer-height;
+    background-color: $foreground;
+    color: $primary;
+    font-family: $primary-font;
+    font-size: $small-font-size;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+
+    // Row全体に幅を持たせて左右に分ける
+    .footer-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    .footer-col-left,
+    .footer-col-right {
+        flex: 0 0 50%;
+    }
+
+    .footer-col-left {
+        text-align: left;
+    }
+
+    .footer-col-right {
+        text-align: right;
+    }
+
+    .footer-col-left-datetime-icon {
+        margin-right: 6px;
+        color: mediumseagreen;
+    }
+    // ノッチ回避用の直角三角形
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: $notch-size;
+        height: $notch-size;
+        background-color: red;
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+        z-index: 1;
+    }
+
+    &::before {
+        bottom: 0;
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        transform: rotate(270deg);
+    }
+}

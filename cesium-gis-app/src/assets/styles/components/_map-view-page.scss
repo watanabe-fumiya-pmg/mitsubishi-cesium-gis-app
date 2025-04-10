@@ -1,0 +1,62 @@
+@use '../variables' as *;
+@use 'sass:color';
+
+// マップ表示領域
+.map-view-main-container {
+    padding-left: 0;
+    padding-right: 0;
+    height: calc(
+        100vh - $header-height - $footer-height
+    ); // ヘッダーとフッターの高さを差し引く
+    position: relative;
+}
+
+// ツールバーのスタイル（マップ右端に配置）
+.map-view-toolbar {
+    position: absolute;
+    top: 20px; // ヘッダーの下にツールバーを配置
+    right: 20px; // 右端にツールバーを配置
+    background-color: $background; // ツールバーの背景色（半透明）
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10; // ツールバーが他の要素の上に来るように
+}
+
+// ボタンスタイル
+.map-view-button {
+    height: 200px;
+    width: 250px;
+    background-color: $background; // 背景色を設定
+    font-family: $primary-font, $japanese-font; // フォントを設定
+    font-size: $large-font-size; // フォントサイズを設定
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: $accent;
+    border: 1px solid white; // ボタンの枠線を白に設定
+
+    // アイコンのサイズを設定
+    svg {
+        width: $display-switch-button-icon-size;
+        height: $display-switch-button-icon-size;
+    }
+
+    // spanタグのフォントサイズとフォントスタイルを設定
+    span {
+        font-size: $medium-font-size;
+        font-weight: bold;
+    }
+
+    // マウスオーバー時のスタイル
+    &:hover {
+        background-color: color.adjust(
+            $background,
+            $lightness: 10%
+        ); // 少し明るくして視認性アップ
+        border: 1px solid $accent;
+        cursor: pointer; // マウスカーソルがポインターに変わる
+    }
+}

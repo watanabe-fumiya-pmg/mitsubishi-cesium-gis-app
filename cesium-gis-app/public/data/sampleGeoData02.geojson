@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yamanote Line"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [139.7016, 35.6895],
+          [139.7101, 35.6901],
+          [139.7165, 35.6916],
+          [139.721, 35.695]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+// custom.scss
+// スタイル全体のエントリーポイント
+
+// custom.scss
+
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./globals";
+@use "./components/display-switch-header";
+@use "./components/display-switch-page";
+@use "./components/map-view-footer";
+@use "./components/map-view-header";
+@use "./components/map-view-toolbar";
+@use "./components/map-view-page";
+@use "~bootstrap/scss/bootstrap"; // Bootstrap本体（必ず変数定義の後）

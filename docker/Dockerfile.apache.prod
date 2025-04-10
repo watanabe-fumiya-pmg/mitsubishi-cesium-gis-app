@@ -1,0 +1,11 @@
+# Dockerfile.apache.prod
+FROM httpd:alpine
+
+# Apacheの設定ファイルをカスタマイズ（必要に応じて変更）
+COPY docker/httpd.conf /usr/local/apache2/conf/httpd.conf
+
+# Reactのビルド結果をApacheのドキュメントルートにコピー
+COPY --from=build /app/build/ /usr/local/apache2/htdocs/
+
+# Apacheをデフォルトで起動
+CMD ["httpd-foreground"]

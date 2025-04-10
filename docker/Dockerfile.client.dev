@@ -1,0 +1,14 @@
+# Dockerfile.client.dev
+FROM node:16
+
+WORKDIR /app
+
+# Reactの依存関係をインストール
+COPY client/package*.json ./
+RUN npm install
+
+# ソースコードをコピー
+COPY client/ ./
+
+# React 開発サーバーを起動
+CMD ["npm", "start"]

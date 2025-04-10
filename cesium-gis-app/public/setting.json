@@ -1,0 +1,9 @@
+{
+  "isfirstlogin": true,
+  "homePosition": {
+    "latitude": 35.681236,
+    "longitude": 139.767125,
+    "height": 10000
+  },
+  "defaultSelectMap": "OSM"
+}

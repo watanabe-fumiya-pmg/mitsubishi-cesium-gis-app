@@ -1,0 +1,36 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shinjuku Area"
+      },
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "LineString",
+            "coordinates": [
+              [139.7016, 35.6902],
+              [139.704, 35.692],
+              [139.7075, 35.6935]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [139.703, 35.6905],
+                [139.705, 35.69],
+                [139.706, 35.692],
+                [139.7045, 35.6925],
+                [139.703, 35.6905]
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

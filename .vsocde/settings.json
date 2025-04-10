@@ -1,0 +1,14 @@
+{
+    // ファイル保存時に ESLint を自動実行
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true // ESLintで自動修正可能な箇所を直す
+    },
+
+    // ESLint をフォーマッターとして使用（必要に応じて Prettierと併用も可）
+    "eslint.validate": ["javascript", "javascriptreact"],
+
+    // フォーマッターを ESLint に指定（任意）
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "files.insertFinalNewline": false, // ← 最終行の改行を禁止
+    "files.trimFinalNewlines": true // ← 末尾の余分な改行を削除
+}

@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kyoto Landmarks"
+      },
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [135.7681, 35.0116]
+          },
+          {
+            "type": "LineString",
+            "coordinates": [
+              [135.7591, 35.0123],
+              [135.764, 35.0152],
+              [135.7675, 35.0175]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [135.767, 35.011],
+                [135.77, 35.01],
+                [135.772, 35.012],
+                [135.7685, 35.0135],
+                [135.767, 35.011]
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

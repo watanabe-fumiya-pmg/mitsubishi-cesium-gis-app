@@ -1,0 +1,31 @@
+// _variables.scss
+
+// カラーパレット
+$primary: #202020; // 地図領域以外のコンポーネントのうち大きな面積の部分
+$foreground: #e6e7e8; // 文字色・アイコンの明色部分・区切り線等
+$background: #424242; // ボタン・アイコンの暗色部分
+$accent: #68c1f9; // 有効なチェックボックスの塗色・決定ボタン等
+
+// テキストフォント
+$primary-font: 'Meiryo', sans-serif;
+$japanese-font: 'Arial', sans-serif;
+
+// フォントサイズ
+$large-font-size: 32px;
+$medium-font-size: 24px;
+$small-font-size: 20px;
+
+// ヘッダー・フッターサイズ
+$header-height: 80px;
+$footer-height: 40px;
+
+// 最大サイズ
+$max-content-height: 946px;
+$max-content-width: 1894px;
+
+//  ノッチサイズ
+$notch-size: 30px;
+
+// アイコンサイズ
+$display-switch-button-icon-size: 64px;
+$header-icon-size: 32px;

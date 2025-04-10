@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osaka Castle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.5232, 34.6873]
+      }
+    }
+  ]
+}

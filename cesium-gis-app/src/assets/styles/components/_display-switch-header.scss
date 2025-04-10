@@ -1,0 +1,65 @@
+// _display-switch-page.scss
+@use '../variables' as *;
+
+// ヘッダーのスタイル
+.display-switch-header-container {
+    background-color: $primary; // ヘッダー背景色
+    color: $foreground; // ヘッダー文字色
+    padding-left: $notch-size;
+    padding-right: $notch-size;
+    height: $header-height;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // ヘッダーの下にシャドウを追加
+
+    // ノッチ回避用の直角三角形
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: $notch-size;
+        height: $notch-size;
+        background-color: red;
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+        z-index: 1;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+    }
+
+    &::after {
+        top: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 100%; // ナビゲーションバーの高さを100%に設定
+
+        .navbar-brand {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: $foreground;
+
+            svg {
+                width: $header-icon-size;
+                height: $header-icon-size;
+                color: $foreground;
+                vertical-align: middle;
+            }
+        }
+
+        // UI要素を縦に中央配置
+        .ms-auto {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

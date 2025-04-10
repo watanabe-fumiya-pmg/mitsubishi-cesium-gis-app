@@ -1,0 +1,20 @@
+// _globals.scss
+@use './variables' as *;
+// CSSリセット風
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background;
+    color: $foreground;
+    font-family: $primary-font;
+}
+
+// リンクの初期化
+a {
+    text-decoration: none;
+    color: inherit;
+}

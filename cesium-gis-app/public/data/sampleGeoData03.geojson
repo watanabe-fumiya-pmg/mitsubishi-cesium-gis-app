@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ueno Park"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [139.7731, 35.7102],
+            [139.78, 35.7102],
+            [139.78, 35.714],
+            [139.7731, 35.714],
+            [139.7731, 35.7102]
+          ]
+        ]
+      }
+    }
+  ]
+}

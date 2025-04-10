@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nara Parks"
+      },
+      "geometry": {
+        "type": "GeometryCollection",
+        "geometries": [
+          {
+            "type": "Point",
+            "coordinates": [135.8327, 34.6851]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [135.83, 34.6835],
+                [135.8345, 34.682],
+                [135.8355, 34.686],
+                [135.831, 34.6875],
+                [135.83, 34.6835]
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

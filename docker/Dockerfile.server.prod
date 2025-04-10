@@ -1,0 +1,14 @@
+# Dockerfile.server.prod
+FROM node:16
+
+WORKDIR /app
+
+# 本番用の依存関係をインストール
+COPY server/package*.json ./
+RUN npm install --production
+
+# サーバーコードをコピー
+COPY server/ ./
+
+# サーバーを起動
+CMD ["node", "server.js"]
