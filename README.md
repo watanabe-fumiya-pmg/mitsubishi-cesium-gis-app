@@ -25,8 +25,8 @@
 
 - フロントエンド: React, Javascript
 
-  - resium が 19 系に対応中　安定板の 18 系を利用
-    https://github.com/reearth/resium/issues/689
+  - resium が 19 系に対応中　安定板の 18 系を利用  
+    ref : https://github.com/reearth/resium/issues/689
   - モジュールハンドラーは webpack を採用
 
 - バックエンド: Node.js, Express
@@ -54,27 +54,48 @@
 
 ## スタイルについて
 
+### 目的
+
+`(案)地理空間情報処理・表示アプリケーション*開発仕様書_本文.pdf` の 4.5 のスタイルガイドを適用するために、スタイル全体のカスタマイズをできるようにするため。
+
 - `SCSS` および `react-bootstrap` を採用  
-  `(案)地理空間情報処理・表示アプリケーション*開発仕様書_本文.pdf` の 4.5 のスタイルガイドを適用するために、スタイル全体のカスタマイズをできるようにするため。
+  React Bootstrap : https://react-bootstrap.netlify.app/
+
+- ICON に関しては、react-icons を利用  
+  React icons : https://react-icons.github.io/react-icons/
 
 ## 開発規約の遵守について
 
-`05\_電三-02-00246_A_HPC サーバシステム開発要領.pdf` の開発規約より命名規則やコーディング規則規約あり。
+### 目的
+
+`05\_電三-02-00246_A_HPC サーバシステム開発要領.pdf` の開発規約より命名規則やコーディング規則規約を満たすため。
 
 - 全て網羅していないが、以下ファイルで制御可能
 
-  - app\eslint.config.js
-  - 命名規則と JsDoc の警告設定
-  - prettierrc と競合しないように設定
+  - app\eslint.config.js  
+    命名規則と JsDoc の警告設定
+  - prettierrc と競合しないように設定  
     app\.prettierrc
-    package.json に設定を入れているため、以下コマンドで規約違反を検知できる。
+  - package.json に設定を入れているため、以下コマンドで規約違反を検知できる。
 
     ```
     npm run lint
     npm run lint:fix
     ```
 
+- 網羅できていない部分（後ほど Issue 管理）
+  - URL の命名規則
+  - サービス、コンテナの命名規則
+  - イメージの命名規則
+  - ファイル、ディレクトリの命名規則
+  - 定数名の命名規則
+  - 例外名の命名規則
+
 ## ロギングについて
+
+### 目的
+
+`05\_電三-02-00246_A_HPC サーバシステム開発要領.pdf` の開発規約よりログの記録方法を満たすため。
 
 - アプリケーションのログ出力は winston を採用想定。node.js 必須。
 - ログローテート処理およびファイル出力が必要なため、react のみでは実装不可の認識。
@@ -122,7 +143,7 @@ npm ci
 ## Docker コンテナ起動方法
 
 ```
-TBD
+【TBD】
 ```
 
 ## アプリ起動方法
@@ -134,7 +155,7 @@ npm run start
 # テスト方法
 
 ```
-TBD
+【TBD】
 ```
 
 # 環境変数
@@ -172,18 +193,41 @@ webpack に dotenv-webpack をインポートしているため、`app/src`配�
 
 # API 仕様
 
-TBD
+【TBD】
 
 # コード修正方法
 
 1. ブランチを作成 (git checkout -b feature/your-feature)
    - ブランチ命名規則に沿ってブランチ作成
+   - 以下ブランチ管理
+     - main : 常時リリース可能状態のブランチ prd と同じ
+     - hotfix : リリース済みのコードの緊急修正用のブランチ
+     - release : リリース準備段階用ブランチ
+     - develop : 開発者用ブランチ dev 環境適用用
+     - feature : 機能開発用ブランチ ローカルでの改修は原則このブランチを切って、実装する
+       - feature ブランチ命名規則
+       - feature/#{issue 番号}\_{機能略称}  
+         例）feature/#000000_module01  
+         参考：https://qiita.com/Shoya-Miyata/items/9e5fd99f226c6479409d
 2. 変更をコミット (git commit -m 'Add your feature')
    - コミット命名規則に則してコミットコメント作成
+     ```
+     git commit -m "prefix: {簡易説明}"
+     ```
+   - prefix 例
+     - feat: 新しい機能
+     - fix: バグの修正
+     - docs: ドキュメントのみの変更
+     - style: 空白、フォーマット、セミコロン追加など
+     - refactor: 仕様に影響がないコード改善(リファクタ)
+     - perf: パフォーマンス向上関連
+     - test: テスト関連
+     - chore: ビルド、補助ツール、ライブラリ関連
 3. プッシュ (git push origin feature/your-feature)
 4. プルリクエストを作成
    1. レビュアー招待規則に沿って、プルリクエスト作成
    2. 確認観点表に沿って、コード品質を担保して、マージ
+   - 【TBD】開発規約から作成想定
 
 # リリース履歴（Changelog / Release Notes）
 
